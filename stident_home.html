@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGIT Digtal Student Attendence Rigister</title>
+    <link rel="stylesheet" href="aside.css">
+    <link rel="stylesheet" href="/add_to_table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/loguot_btn.css">
+</head>
+<body>
+    <div class="app">
+
+        <!-- menu toggle -->
+
+        <div class="menu-toggle">
+            <div class="toggle">
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Side nav bar -->
+        
+        <aside class="sidebar">
+
+            <div class="logo">
+                <img src="/richfield_logo.PNG" alt="logo">
+            </div>
+
+            <h3>Menu</h3>
+            <nav class="menu">
+                <a href="#" class="menu-item is-active">Dashboard</a>
+                <a href="/about.html" class="menu-item">About</a>
+                <a href="#" class="menu-item">eLibrary</a>
+                <a href="/calendar.html" class="menu-item">Calendar</a>
+                <a href="/forum.html" class="menu-item">Discussion Forum</a>
+            </nav>
+            <h3>Settings</h3>
+            <nav class="menu">
+                <a href="/privacy.html" class="menu-item">Privacy</a>
+                <a href="/account.html" class="menu-item">Manage account</a>
+
+                        <!-- Logout button with an icon -->
+            
+                <a href="/login.html">
+                    <button class="logout-btn" id="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Log Out
+                    </button>
+                </a>
+            </nav>
+
+        </aside>
+
+        <!-- Main content -->
+        
+        <div class="content">
+            <h1>Student's DashBoard</h1>
+
+            <!-- table to hold added students -->
+            
+            <table id="record-table">
+                <thead>
+                    <tr>
+                        <th>Student Number</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Date attended</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Added student will come here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+
+        // Add a toggle button when the document shrinks
+        const menu_toggle = document.querySelector(".menu-toggle");
+        const sidebar = document.querySelector(".sidebar");
+        
+        menu_toggle.addEventListener('click', () => {
+            menu_toggle.classList.toggle("is-active");
+            sidebar.classList.toggle("is-active");
+        });    
+    </script>
+    <script>
+        const logoutButton = document.getElementById('logout-btn');
+        
+        logoutButton.addEventListener('click', function () {
+            // Perform logout actions here (e.g., clearing session, redirecting to a login page)
+            alert('Logged out successfully'); // Replace this with actual logout logic
+        });
+    </script>
+</body>
+</html>

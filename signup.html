@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/signup.css">
+    <title>Signup</title>
+</head>
+<body>
+    <body>
+        
+        <div class="center">
+            <h1>Signup</h1>
+            <form>
+                <div class="select">
+                    <select required>
+                        <option show value="login" selected disabled>signup as</option>
+                        <option value="Administrator">Administrator</option>
+                        <option value="Lecture">Lecture</option>
+                        <option value="Student">Student</option>
+                    </select>
+                </div>
+                <div class="first_section">
+                    <div class="txt_field">
+                        <input type="text" required placeholder="First Name">
+                        <span></span>
+                    </div>
+                    <div class="txt_field">
+                        <input type="text" placeholder="Last Name">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="second_section">
+                    <div class="txt_field">
+                        <input type="text" required placeholder="Email Address">
+                        <span></span>
+                    </div>
+                    <div class="txt_field">
+                        <input type="text" placeholder="Confirm Email Address">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="third_section">
+                    <div class="txt_field">
+                        <input type="password" required placeholder="Password">
+                        <span></span>
+                    </div>
+                    <div class="txt_field">
+                        <input type="password" placeholder="Confirm password">
+                        <span></span>
+                    </div>
+                </div>
+
+            </form>
+            <center><a href="/home.html"><input class='submit' type="submit" value="Register"></a></center>
+        
+        </div>
+        
+
+        <script>
+            const menu_toggle = document.querySelector(".menu-toggle");
+            const sidebar = document.querySelector(".sidebar");
+            
+            menu_toggle.addEventListener('click', () => {
+                menu_toggle.classList.toggle("is-active");
+                sidebar.classList.toggle("is-active");
+            });    
+        </script>
+    </body>
+    
+</body>
+</html>
